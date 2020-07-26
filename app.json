@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A mobile app to list and sell stuff",
+    "githubUrl": "https://github.com/ariozone/selling-it.git"
   }
 }
