@@ -7,6 +7,7 @@ export default function App() {
   const handlePress = () => {
     Alert.alert("Message:", "Do you want to continiue?", [
       { text: "Yes", onPress: () => console.log("Yes") },
+      // { text: "Maybe", onPress: () => console.log("Maybe") },
       { text: "No", onPress: () => console.log("No") },
     ])
   }
