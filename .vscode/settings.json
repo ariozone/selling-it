@@ -4,5 +4,6 @@
   "prettier.documentSelectors": [
     "React",
     "React Native"
-  ]
+  ],
+  "editor.snippetSuggestions": "top"
 }
