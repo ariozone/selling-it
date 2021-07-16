@@ -1,8 +1,9 @@
 import React from "react"
 
-import { View } from "react-native"
+import { Text, View } from "react-native"
 import ViewImageScreen from "./app/screens/ViewImageScreen"
 import WelcomeScreen from "./app/screens/WelcomeScreen"
+import AppText from './app/components/AppText'
 
 
 export default function App() {
@@ -14,36 +15,20 @@ export default function App() {
     <View style={{
       flex: 1,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      paddingHorizontal: 50
+
     }}>
-      <View style={{
-        backgroundColor: 'dodgerblue',
-        width: 100,
-        height: 100,
-        shadowColor: 'gray',
-        shadowOffset: { width: 10, height: 10 },
-        shadowOpacity: 1,
-        shadowRadius: 10,
-        elevation: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 30
 
+      <AppText style={{
+        fontSize: 30,
+        fontWeight: 'bold',
+        color: 'tomato',
+        textAlign: 'center',
+        lineHeight: 30
+      }}>I love React Native! Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
 
-      }}>
-        <View style={{
-          backgroundColor: 'gold',
-          width: 50,
-          height: 50
-        }}></View>
-      </View>
-      <View style={{
-        backgroundColor: 'tomato',
-        width: 100,
-        height: 100,
-        marginTop: 30
-      }}></View>
-
+      </AppText>
     </View>
   )
 }
