@@ -6,19 +6,21 @@ import WelcomeScreen from "./app/screens/WelcomeScreen"
 
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Card from "./app/components/Card"
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
 const colors = require('./app/config/colors')
 
 
 export default function App() {
   return (
-    <View style={{
-      backgroundColor: '#f8f4f4',
-      width: '100%', height: '100%',
-      padding: 20,
-      paddingTop: 100
-    }}>
-      <Card title='Red jacket for sale' subTitle='$200' imageUrl={require('./app/assets/jacket.jpg')}></Card>
-    </View>
+    <ListingDetailsScreen></ListingDetailsScreen>
+    // <View style={{
+    //   backgroundColor: '#f8f4f4',
+    //   width: '100%', height: '100%',
+    //   padding: 20,
+    //   paddingTop: 100
+    // }}>
+    //   <Card title='Red jacket for sale' subTitle='$200' imageUrl={require('./app/assets/jacket.jpg')}></Card>
+    // </View>
 
     // <WelcomeScreen>
     // </WelcomeScreen>
