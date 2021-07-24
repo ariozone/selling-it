@@ -4,15 +4,17 @@ import { Button, Text, View } from "react-native"
 import ViewImageScreen from "./app/screens/ViewImageScreen"
 import WelcomeScreen from "./app/screens/WelcomeScreen"
 
-import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Card from "./app/components/Card"
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
+import MessagesScreen from "./app/screens/MessagesScreen"
 const colors = require('./app/config/colors')
 
 
 export default function App() {
   return (
-    <ListingDetailsScreen></ListingDetailsScreen>
+    // <ListingDetailsScreen></ListingDetailsScreen>
+    <MessagesScreen></MessagesScreen>
+    // <ViewImageScreen></ViewImageScreen>
     // <View style={{
     //   backgroundColor: '#f8f4f4',
     //   width: '100%', height: '100%',
