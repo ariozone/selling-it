@@ -5,7 +5,8 @@ import ListItem from '../components/ListItem';
 
 import Screen from '../components/Screen'
 import ListItemSeparator from '../components/ListItemSeparator';
-const message = [{
+import ListItemDeleteAction from '../components/ListItemDeleteAction';
+const initialMessages = [{
 
   id: 1,
   title: "accusamus beatae ad facilis cum similique qui sunt",
@@ -36,22 +37,27 @@ const message = [{
 ]
 
 function MessagesScreen(props) {
-  // const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState(initialMessages)
   // const getMessages = async () => await axios.get('https://jsonplaceholder.typicode.com/photos')
   // useEffect(setMessages(getMessages()), [])
   // console.log(messages)
+  const handleDelete = message => {
+    setMessages(messages.filter(m => m.id !== message.id))
+  }
   return (
     <Screen >
 
       <FlatList
-        data={message}
-        keyExtractor={message => message.id.toString()}
+        data={messages}
+        keyExtractor={messages => messages.id.toString()}
         renderItem={({ item }) => (
           <ListItem
             title={item.title}
             subTitle={item.url}
             image={item.image}
             onPress={() => console.log('Messege selected', item)}
+            renderRightActions={() => <ListItemDeleteAction onPress={
+              () => handleDelete(item)} />}
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
