@@ -38,6 +38,7 @@ const initialMessages = [{
 
 function MessagesScreen(props) {
   const [messages, setMessages] = useState(initialMessages)
+  const [refreshing, setRefreshing] = useState(false)
   // const getMessages = async () => await axios.get('https://jsonplaceholder.typicode.com/photos')
   // useEffect(setMessages(getMessages()), [])
   // console.log(messages)
@@ -61,6 +62,16 @@ function MessagesScreen(props) {
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
+        refreshing={refreshing}
+        onRefresh={() => {
+          setMessages([{
+
+            id: 3,
+            title: "officia porro iure quia iusto qui ipsa ut modi",
+            image: require('../assets/jacket.jpg'),
+            url: "https://via.placeholder.com/600/24f355"
+          }])
+        }}
 
       />
     </Screen>

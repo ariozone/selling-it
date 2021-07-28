@@ -5,5 +5,7 @@ export default {
   white: '#fff',
   medium: '#6e6969',
   light: '#f8f4f4',
-  danger: '#ff5252'
+  danger: '#ff5252',
+  LogOut: '#ffe66d '
+
 }
