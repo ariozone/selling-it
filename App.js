@@ -8,20 +8,21 @@ import Icon from './app/components/Icon'
 import Card from "./app/components/Card"
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
 import MessagesScreen from "./app/screens/MessagesScreen"
+import ListItem from "./app/components/ListItem"
+import AccountScreen from "./app/screens/AccountScreen"
 const colors = require('./app/config/colors')
 
 
 export default function App() {
   return (
     // <ListingDetailsScreen></ListingDetailsScreen>
-    <Screen>
-      <Icon
-        name='email'
-        size={150}
-        backgroundColor='red'
-        iconColor='white'
-      ></Icon>
-    </Screen>
+    <AccountScreen></AccountScreen>
+    // <Screen>
+    //   <ListItem
+    //     title='My Title'
+    //     // subTitle='My subtitle'
+    //     IconComponent={<Icon name='email' ></Icon>}></ListItem>
+    // </Screen>
     // <MessagesScreen></MessagesScreen>
     // <ViewImageScreen></ViewImageScreen>
     // <View style={{
