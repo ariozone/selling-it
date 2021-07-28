@@ -3,7 +3,8 @@ import React from "react"
 import { Button, Text, View } from "react-native"
 import ViewImageScreen from "./app/screens/ViewImageScreen"
 import WelcomeScreen from "./app/screens/WelcomeScreen"
-
+import Screen from "./app/components/Screen"
+import Icon from './app/components/Icon'
 import Card from "./app/components/Card"
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
 import MessagesScreen from "./app/screens/MessagesScreen"
@@ -13,7 +14,15 @@ const colors = require('./app/config/colors')
 export default function App() {
   return (
     // <ListingDetailsScreen></ListingDetailsScreen>
-    <MessagesScreen></MessagesScreen>
+    <Screen>
+      <Icon
+        name='email'
+        size={150}
+        backgroundColor='red'
+        iconColor='white'
+      ></Icon>
+    </Screen>
+    // <MessagesScreen></MessagesScreen>
     // <ViewImageScreen></ViewImageScreen>
     // <View style={{
     //   backgroundColor: '#f8f4f4',
