@@ -10,13 +10,15 @@ import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
 import MessagesScreen from "./app/screens/MessagesScreen"
 import ListItem from "./app/components/ListItem"
 import AccountScreen from "./app/screens/AccountScreen"
+import ListingsScreen from "./app/screens/ListingsScreen"
 const colors = require('./app/config/colors')
 
 
 export default function App() {
   return (
     // <ListingDetailsScreen></ListingDetailsScreen>
-    <AccountScreen></AccountScreen>
+    // <AccountScreen></AccountScreen>
+    <ListingsScreen></ListingsScreen>
     // <Screen>
     //   <ListItem
     //     title='My Title'
