@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { Button, Text, TextInput, View } from "react-native"
+import { Button, Switch, Text, TextInput, View } from "react-native"
 import ViewImageScreen from "./app/screens/ViewImageScreen"
 import WelcomeScreen from "./app/screens/WelcomeScreen"
 import Screen from "./app/components/Screen"
@@ -12,15 +12,19 @@ import ListItem from "./app/components/ListItem"
 import AccountScreen from "./app/screens/AccountScreen"
 import ListingsScreen from "./app/screens/ListingsScreen"
 import AppTextInput from "./app/components/AppTextInput"
+import AppPicker from "./app/components/AppPicker"
 const colors = require('./app/config/colors')
 
 
 export default function App() {
   const [firstName, setFirstName] = useState('')
   const handleFirstName = input => setFirstName(input)
+  const [isNew, setIsNew] = useState(false)
   return (
     <Screen>
-      <AppTextInput placeholder='Username' icon='email' />
+      <AppPicker placeholder='category' icon='apps'></AppPicker>
+      <AppTextInput placeholder='email' icon='email' />
+      {/* <AppTextInput placeholder='Username' icon='email' /> */}
       {/* <Text>{firstName}</Text>
       <TextInput
         onChangeText={handleFirstName}
