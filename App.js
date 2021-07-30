@@ -11,6 +11,7 @@ import MessagesScreen from "./app/screens/MessagesScreen"
 import ListItem from "./app/components/ListItem"
 import AccountScreen from "./app/screens/AccountScreen"
 import ListingsScreen from "./app/screens/ListingsScreen"
+import AppTextInput from "./app/components/AppTextInput"
 const colors = require('./app/config/colors')
 
 
@@ -19,7 +20,8 @@ export default function App() {
   const handleFirstName = input => setFirstName(input)
   return (
     <Screen>
-      <Text>{firstName}</Text>
+      <AppTextInput placeholder='Username' icon='email' />
+      {/* <Text>{firstName}</Text>
       <TextInput
         onChangeText={handleFirstName}
         placeholder='First Name'
@@ -27,7 +29,7 @@ export default function App() {
           borderBottomColor: '#ccc',
           borderBottomWidth: 1
         }}
-      />
+      /> */}
     </Screen>
     // <ListingDetailsScreen></ListingDetailsScreen>
     // <AccountScreen></AccountScreen>
