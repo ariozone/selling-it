@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 
-import { Button, Text, View } from "react-native"
+import { Button, Text, TextInput, View } from "react-native"
 import ViewImageScreen from "./app/screens/ViewImageScreen"
 import WelcomeScreen from "./app/screens/WelcomeScreen"
 import Screen from "./app/components/Screen"
@@ -15,10 +15,23 @@ const colors = require('./app/config/colors')
 
 
 export default function App() {
+  const [firstName, setFirstName] = useState('')
+  const handleFirstName = input => setFirstName(input)
   return (
+    <Screen>
+      <Text>{firstName}</Text>
+      <TextInput
+        onChangeText={handleFirstName}
+        placeholder='First Name'
+        style={{
+          borderBottomColor: '#ccc',
+          borderBottomWidth: 1
+        }}
+      />
+    </Screen>
     // <ListingDetailsScreen></ListingDetailsScreen>
     // <AccountScreen></AccountScreen>
-    <ListingsScreen></ListingsScreen>
+    // <ListingsScreen></ListingsScreen>
     // <Screen>
     //   <ListItem
     //     title='My Title'
