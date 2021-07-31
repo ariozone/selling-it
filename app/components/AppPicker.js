@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Button, Modal, StyleSheet, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
+import { Button, FlatList, Modal, StyleSheet, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Screen from './Screen';
 import defaultStyles from '../config/styles';
 import AppText from './AppText';
-import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
+import PickerItem from './PickerItem';
 
-function AppPicker({ icon, placeholder, ...otherProps }) {
+function AppPicker({ icon, placeholder, items, ...otherProps }) {
   const [modalVisible, setModalVisible] = useState(false)
   return (
     <>
@@ -19,8 +19,12 @@ function AppPicker({ icon, placeholder, ...otherProps }) {
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType='slide'>
         <Screen>
-
           <Button title='close' onPress={() => setModalVisible(false)}></Button>
+          <FlatList
+            data={items}
+            keyExtractor={item => item.label}
+            renderItem={({ item }) => <PickerItem label={item.label}
+              onPress={() => console.log(item)}></PickerItem>}></FlatList>
         </Screen>
       </Modal>
     </>

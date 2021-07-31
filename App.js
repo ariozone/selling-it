@@ -15,14 +15,22 @@ import AppTextInput from "./app/components/AppTextInput"
 import AppPicker from "./app/components/AppPicker"
 const colors = require('./app/config/colors')
 
-
+const categories = [{
+  label: 'Furniture', value: 1
+},
+{
+  label: 'Clothing', value: 2
+},
+{
+  label: 'Cameras', value: 3
+}]
 export default function App() {
   const [firstName, setFirstName] = useState('')
   const handleFirstName = input => setFirstName(input)
   const [isNew, setIsNew] = useState(false)
   return (
     <Screen>
-      <AppPicker placeholder='category' icon='apps'></AppPicker>
+      <AppPicker placeholder='category' icon='apps' items={categories}></AppPicker>
       <AppTextInput placeholder='email' icon='email' />
       {/* <AppTextInput placeholder='Username' icon='email' /> */}
       {/* <Text>{firstName}</Text>
