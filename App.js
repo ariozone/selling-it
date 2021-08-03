@@ -13,6 +13,7 @@ import AccountScreen from "./app/screens/AccountScreen"
 import ListingsScreen from "./app/screens/ListingsScreen"
 import AppTextInput from "./app/components/AppTextInput"
 import AppPicker from "./app/components/AppPicker"
+import LoginScreen from "./app/screens/LoginScreen"
 const colors = require('./app/config/colors')
 
 const categories = [{
@@ -25,13 +26,14 @@ const categories = [{
   label: 'Cameras', value: 3
 }]
 export default function App() {
-  const [firstName, setFirstName] = useState('')
-  const handleFirstName = input => setFirstName(input)
-  const [isNew, setIsNew] = useState(false)
-  const [category, setCategory] = useState(categories[0])
+  // const [firstName, setFirstName] = useState('')
+  // const handleFirstName = input => setFirstName(input)
+  // const [isNew, setIsNew] = useState(false)
+  // const [category, setCategory] = useState(categories[0])
   return (
     <Screen>
-      <AppPicker
+      <LoginScreen></LoginScreen>
+      {/* <AppPicker
         selectedItem={category}
         onSelectItem={item => setCategory(item)}
         placeholder='category'
@@ -40,7 +42,7 @@ export default function App() {
       >
 
       </AppPicker>
-      <AppTextInput placeholder='email' icon='email' />
+      <AppTextInput placeholder='email' icon='email' /> */}
       {/* <AppTextInput placeholder='Username' icon='email' /> */}
       {/* <Text>{firstName}</Text>
       <TextInput

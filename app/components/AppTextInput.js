@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: 15,
     marginVertical: 10,
-
     alignItems: 'center'
   },
   textInput: defaultStyles.text,
