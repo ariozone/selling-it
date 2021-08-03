@@ -11,23 +11,23 @@ function LoginScreen(props) {
     <Screen style={styles.container}>
       <Image source={require('../assets/logo-red.png')} style={styles.logo}></Image>
       <AppTextInput
-        placeholder='email'
         icon='email'
+        placeholder='email'
         autoCapitalize='none'
         autoCorrect={false}
         keyboardType='email-address'
         textContentType='emailAddress'
-        onTextChange={input => setEmail(text)}
+        onChangeText={input => setEmail(input)}
 
       />
       <AppTextInput
+        icon='lock'
+        placeholder='password'
         autoCapitalize='none'
         autoCorrect={false}
-        placeholder='password'
-        icon='lock'
         textContentType='password'
         secureTextEntry
-        onTextChange={text => setPassword(text)}
+        onChangeText={text => setPassword(text)}
       />
       <AppButton title='Login' onPress={() => console.log(email, password)} />
     </Screen>
