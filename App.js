@@ -1,9 +1,10 @@
 import React, { useState } from "react"
+import RegisterScreen from "./app/screens/RegisterScreen"
 
 // import { Button, Switch, Text, TextInput, View } from "react-native"
 // import ViewImageScreen from "./app/screens/ViewImageScreen"
 // import WelcomeScreen from "./app/screens/WelcomeScreen"
-import Screen from "./app/components/Screen"
+// import Screen from "./app/components/Screen"
 // import Icon from './app/components/Icon'
 // import Card from "./app/components/Card"
 // import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
@@ -13,8 +14,10 @@ import Screen from "./app/components/Screen"
 // import ListingsScreen from "./app/screens/ListingsScreen"
 // import AppTextInput from "./app/components/AppTextInput"
 // import AppPicker from "./app/components/AppPicker"
-import LoginScreen from "./app/screens/LoginScreen"
+// import LoginScreen from "./app/screens/LoginScreen"
+
 // const colors = require('./app/config/colors')
+
 
 // const categories = [{
 //   label: 'Furniture', value: 1
@@ -26,11 +29,14 @@ import LoginScreen from "./app/screens/LoginScreen"
 //   label: 'Cameras', value: 3
 // }]
 export default function App() {
+  return (
+    <RegisterScreen></RegisterScreen>
+  )
   //   const [firstName, setFirstName] = useState('')
   //   const handleFirstName = input => setFirstName(input)
   //   const [isNew, setIsNew] = useState(false)
   //   const [category, setCategory] = useState(categories[0])
-  return <LoginScreen></LoginScreen>
+  // return <LoginScreen></LoginScreen>
   // <Screen>
   {/* <AppPicker
         selectedItem={category}
