@@ -38,7 +38,7 @@ function ListingsScreen(props) {
 
 const styles = StyleSheet.create({
   screen: {
-    padding: Platform.OS === 'android' ? 10 : 20,
+    padding: Platform.OS === 'android' ? 10 : 15,
     backgroundColor: colors.light
   }
 })

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import ListingEditScreen from "./app/screens/ListingEditScreen"
 import RegisterScreen from "./app/screens/RegisterScreen"
 
 // import { Button, Switch, Text, TextInput, View } from "react-native"
@@ -30,7 +31,8 @@ import RegisterScreen from "./app/screens/RegisterScreen"
 // }]
 export default function App() {
   return (
-    <RegisterScreen></RegisterScreen>
+    <ListingEditScreen></ListingEditScreen>
+    // <RegisterScreen></RegisterScreen>
   )
   //   const [firstName, setFirstName] = useState('')
   //   const handleFirstName = input => setFirstName(input)
