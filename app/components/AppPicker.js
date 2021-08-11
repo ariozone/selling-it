@@ -5,6 +5,7 @@ import Screen from './Screen';
 import defaultStyles from '../config/styles';
 import AppText from './AppText';
 import PickerItem from './PickerItem';
+import colors from '../config/colors';
 
 function AppPicker({ icon, placeholder, items, selectedItem, onSelectItem, ...otherProps }) {
   const [modalVisible, setModalVisible] = useState(false)
@@ -13,8 +14,12 @@ function AppPicker({ icon, placeholder, items, selectedItem, onSelectItem, ...ot
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
         <View style={styles.container}>
           {icon && <MaterialCommunityIcons name={icon} size={25} color={defaultStyles.colors.medium} style={styles.icon} />}
-          <AppText style={styles.text}>{selectedItem ? selectedItem.label : placeholder}</AppText>
-          <MaterialCommunityIcons name='chevron-down' size={25} color={defaultStyles.colors.medium} />
+          {selectedItem ? (
+            <AppText style={styles.text}>{selectedItem.label}</AppText>
+          ) : (
+            <AppText style={styles.placeholder}>{placeholder}</AppText>
+          )}
+          < MaterialCommunityIcons name='chevron-down' size={25} color={defaultStyles.colors.medium} />
         </View>
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType='slide'>
@@ -52,6 +57,10 @@ const styles = StyleSheet.create({
   text: { flex: 1 },
   modal: {
     backgroundColor: 'blue'
+  },
+  placeholder: {
+    color: defaultStyles.colors.medium,
+    flex: 1
   }
 })
 

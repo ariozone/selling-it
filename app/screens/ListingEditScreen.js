@@ -1,14 +1,22 @@
 import React from 'react';
 import Screen from '../components/Screen';
 import { StyleSheet } from 'react-native'
-import { AppFormField, AppForm, SubmitButton } from '../components/forms'
+import { AppFormField, AppForm, SubmitButton, AppFormPicker } from '../components/forms'
 import * as Yup from 'yup'
 
+
 const validationSchema = Yup.object().shape({
-  title: Yup.string().required().label('Title').trim(),
-  price: Yup.number().required().label('Price'),
-  description: Yup.string().required().max(100).trim().label('Description')
+  title: Yup.string().required().label('Title').min(1).trim(),
+  price: Yup.number().required().min(1).max(1000000).label('Price'),
+  description: Yup.string().max(300).trim().label('Description'),
+  category: Yup.object().required().nullable().label('Category')
 })
+const categories = [
+  { label: 'Furniture', value: 1 },
+  { label: 'Camera', value: 3 },
+  { label: 'Clothing', value: 2 },
+  { label: 'Cars', value: 4 }
+]
 function ListingEditScreen(props) {
   return (
     <Screen style={styles.container}>
@@ -17,7 +25,8 @@ function ListingEditScreen(props) {
           {
             title: '',
             price: '',
-            description: ''
+            description: '',
+            category: null
           }
         }
         validationSchema={validationSchema}
@@ -25,24 +34,29 @@ function ListingEditScreen(props) {
         <AppFormField
           name='title'
           placeholder='Title'
-
-          autoCapitalize='none'
-          autoCorrect={false}
+          maxLength={255}
 
         >
         </AppFormField>
         <AppFormField
           name='price'
           placeholder='Price'
+          keyboardType='numeric'
+          maxLength={10}
 
         >
         </AppFormField>
+        <AppFormPicker
+          name='category'
+          placeholder='Category'
+          items={categories}
+        ></AppFormPicker>
         <AppFormField
           name='description'
           placeholder='Description'
-
-          autoCapitalize='none'
-          autoCorrect={false}
+          maxLength={300}
+          multiline
+          numberOfLines={3}
 
         >
         </AppFormField>
