@@ -9,30 +9,30 @@ import ListItemDeleteAction from '../components/ListItemDeleteAction';
 const initialMessages = [{
 
   id: 1,
-  title: "accusamus beatae ad facilis cum similique qui sunt",
+  title: "Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.",
   image: require('../assets/at.jpg'),
-  url: "https://via.placeholder.com/600/92c952"
+  url: "Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to."
 },
 {
 
   id: 2,
-  title: "reprehenderit est deserunt velit ipsam",
+  title: "reprehenderit",
   image: require('../assets/chair.jpg'),
-  url: "https://via.placeholder.com/600/771796"
+  url: "h/771796"
 },
 {
 
   id: 3,
-  title: "officia porro iure quia iusto qui ipsa ut modi",
+  title: "officia",
   image: require('../assets/jacket.jpg'),
-  url: "https://via.placeholder.com/600/24f355"
+  url: "via.place"
 },
 {
 
   id: 4,
-  title: "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+  title: "culpa odio ",
   image: require('../assets/logo-red.png'),
-  url: "https://via.placeholder.com/600/d32776"
+  url: "der.co776"
 }
 ]
 
@@ -67,9 +67,9 @@ function MessagesScreen(props) {
           setMessages([{
 
             id: 3,
-            title: "officia porro iure quia iusto qui ipsa ut modi",
+            title: "officia ",
             image: require('../assets/jacket.jpg'),
-            url: "https://via.placeholder.com/600/24f355"
+            url: "https"
           }])
         }}
 

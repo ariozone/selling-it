@@ -8,11 +8,13 @@ import RegisterScreen from "./app/screens/RegisterScreen"
 // import Screen from "./app/components/Screen"
 // import Icon from './app/components/Icon'
 // import Card from "./app/components/Card"
-// import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
 // import MessagesScreen from "./app/screens/MessagesScreen"
 // import ListItem from "./app/components/ListItem"
 // import AccountScreen from "./app/screens/AccountScreen"
-// import ListingsScreen from "./app/screens/ListingsScreen"
+import ListingsScreen from "./app/screens/ListingsScreen"
+import AccountScreen from "./app/screens/AccountScreen"
+import MessagesScreen from "./app/screens/MessagesScreen"
 // import AppTextInput from "./app/components/AppTextInput"
 // import AppPicker from "./app/components/AppPicker"
 // import LoginScreen from "./app/screens/LoginScreen"
@@ -31,8 +33,12 @@ import RegisterScreen from "./app/screens/RegisterScreen"
 // }]
 export default function App() {
   return (
-    <ListingEditScreen></ListingEditScreen>
+    <MessagesScreen></MessagesScreen>
+    // <ListingDetailsScreen></ListingDetailsScreen>
+    // <ListingEditScreen></ListingEditScreen>
     // <RegisterScreen></RegisterScreen>
+    // <ListingsScreen></ListingsScreen>
+    // <AccountScreen></AccountScreen>
   )
   //   const [firstName, setFirstName] = useState('')
   //   const handleFirstName = input => setFirstName(input)
@@ -61,7 +67,6 @@ export default function App() {
         }}
       /> */}
   // </Screen>
-  // <ListingDetailsScreen></ListingDetailsScreen>
   // <AccountScreen></AccountScreen>
   // <ListingsScreen></ListingsScreen>
   // <Screen>

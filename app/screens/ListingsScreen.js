@@ -8,7 +8,7 @@ import colors from '../config/colors';
 
 const listings = [{
   id: 1,
-  title: 'Red Jacket for Sale',
+  title: 'Red Jacket for Sale ',
   price: 200,
   image: require('../assets/jacket.jpg')
 },
