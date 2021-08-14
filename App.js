@@ -33,9 +33,9 @@ import MessagesScreen from "./app/screens/MessagesScreen"
 // }]
 export default function App() {
   return (
-    <MessagesScreen></MessagesScreen>
+    // <MessagesScreen></MessagesScreen>
     // <ListingDetailsScreen></ListingDetailsScreen>
-    // <ListingEditScreen></ListingEditScreen>
+    <ListingEditScreen></ListingEditScreen>
     // <RegisterScreen></RegisterScreen>
     // <ListingsScreen></ListingsScreen>
     // <AccountScreen></AccountScreen>

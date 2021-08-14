@@ -17,7 +17,7 @@ const categories = [
   { label: 'Clothing', value: 2 },
   { label: 'Cars', value: 4 }
 ]
-function ListingEditScreen(props) {
+function ListingEditScreen({ width }) {
   return (
     <Screen style={styles.container}>
       <AppForm
@@ -43,13 +43,14 @@ function ListingEditScreen(props) {
           placeholder='Price'
           keyboardType='numeric'
           maxLength={10}
-
+          width={150}
         >
         </AppFormField>
         <AppFormPicker
           name='category'
           placeholder='Category'
           items={categories}
+          width='50%'
         ></AppFormPicker>
         <AppFormField
           name='description'

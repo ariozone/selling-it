@@ -7,12 +7,12 @@ import AppText from './AppText';
 import PickerItem from './PickerItem';
 import colors from '../config/colors';
 
-function AppPicker({ icon, placeholder, items, selectedItem, onSelectItem, ...otherProps }) {
+function AppPicker({ icon, placeholder, items, selectedItem, onSelectItem, width = '100%', ...otherProps }) {
   const [modalVisible, setModalVisible] = useState(false)
   return (
     <>
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-        <View style={styles.container}>
+        <View style={[styles.container, { width }]}>
           {icon && <MaterialCommunityIcons name={icon} size={25} color={defaultStyles.colors.medium} style={styles.icon} />}
           {selectedItem ? (
             <AppText style={styles.text}>{selectedItem.label}</AppText>
@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: defaultStyles.colors.light,
     borderRadius: 25,
-    width: '100%',
     padding: 15,
     marginVertical: 10,
 
