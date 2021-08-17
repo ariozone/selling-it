@@ -5,9 +5,8 @@ import Screen from './Screen';
 import defaultStyles from '../config/styles';
 import AppText from './AppText';
 import PickerItem from './PickerItem';
-import colors from '../config/colors';
 
-function AppPicker({ icon, placeholder, items, selectedItem, onSelectItem, width = '100%', ...otherProps }) {
+function AppPicker({ icon, placeholder, items, selectedItem, numberOfColumns = 1, width = '100%', PickerItemComponent = PickerItem }) {
   const [modalVisible, setModalVisible] = useState(false)
   return (
     <>
@@ -28,11 +27,14 @@ function AppPicker({ icon, placeholder, items, selectedItem, onSelectItem, width
           <FlatList
             data={items}
             keyExtractor={item => item.label}
-            renderItem={({ item }) => <PickerItem label={item.label}
+            numColumns={numberOfColumns}
+            renderItem={({ item }) => <PickerItemComponent
+              item={item}
+              label={item.label}
               onPress={() => {
                 setModalVisible(false)
                 onSelectItem(item)
-              }}></PickerItem>}></FlatList>
+              }}></PickerItemComponent>}></FlatList>
         </Screen>
       </Modal>
     </>
