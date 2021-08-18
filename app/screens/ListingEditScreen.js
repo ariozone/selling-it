@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
 })
 const categories = [
   { label: 'Furniture', backgroundColor: 'red', icon: 'umbrella', value: 1 },
-  { label: 'Camera', backgroundColor: 'green', icon: 'camera', value: 3 },
+  { label: 'Cameraaaaaaaaaa', backgroundColor: 'green', icon: 'camera', value: 3 },
   { label: 'Clothing', backgroundColor: 'blue', icon: 'glasses', value: 2 },
   { label: 'Cars', backgroundColor: 'orange', icon: 'car', value: 4 }
 ]
@@ -70,6 +70,6 @@ function ListingEditScreen({ width }) {
   );
 }
 const styles = StyleSheet.create({
-  container: { padding: Platform.OS === 'android' ? 10 : 20, }
+  container: { padding: Platform.OS === 'android' ? 10 : 20 }
 })
 export default ListingEditScreen;

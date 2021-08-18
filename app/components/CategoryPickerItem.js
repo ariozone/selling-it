@@ -14,10 +14,12 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 30,
     paddingVertical: 15,
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '33%'
   },
   label: {
-    marginTop: 10
+    marginTop: 10,
+    textAlign: 'center'
   }
 })
 
