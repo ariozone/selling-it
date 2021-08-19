@@ -1,20 +1,20 @@
-import React, { useState } from "react"
-import ListingEditScreen from "./app/screens/ListingEditScreen"
-import RegisterScreen from "./app/screens/RegisterScreen"
-
+import React, { useEffect } from "react"
+// import ListingEditScreen from "./app/screens/ListingEditScreen"
+// import RegisterScreen from "./app/screens/RegisterScreen"
+import * as ImagePicker from 'expo-image-picker'
 // import { Button, Switch, Text, TextInput, View } from "react-native"
 // import ViewImageScreen from "./app/screens/ViewImageScreen"
 // import WelcomeScreen from "./app/screens/WelcomeScreen"
-// import Screen from "./app/components/Screen"
+import Screen from "./app/components/Screen"
 // import Icon from './app/components/Icon'
 // import Card from "./app/components/Card"
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
+// import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
 // import MessagesScreen from "./app/screens/MessagesScreen"
 // import ListItem from "./app/components/ListItem"
 // import AccountScreen from "./app/screens/AccountScreen"
-import ListingsScreen from "./app/screens/ListingsScreen"
-import AccountScreen from "./app/screens/AccountScreen"
-import MessagesScreen from "./app/screens/MessagesScreen"
+// import ListingsScreen from "./app/screens/ListingsScreen"
+// import AccountScreen from "./app/screens/AccountScreen"
+// import MessagesScreen from "./app/screens/MessagesScreen"
 // import AppTextInput from "./app/components/AppTextInput"
 // import AppPicker from "./app/components/AppPicker"
 // import LoginScreen from "./app/screens/LoginScreen"
@@ -32,10 +32,17 @@ import MessagesScreen from "./app/screens/MessagesScreen"
 //   label: 'Cameras', value: 3
 // }]
 export default function App() {
-  return (
+  const requestPermission = async () => {
+    const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync()
+    if (!granted) alert('You need to enable access to the library.')
+  }
+  useEffect(() => {
+    requestPermission()
+  }, [])
+  return (<Screen></Screen>
     // <MessagesScreen></MessagesScreen>
     // <ListingDetailsScreen></ListingDetailsScreen>
-    <ListingEditScreen></ListingEditScreen>
+    // <ListingEditScreen></ListingEditScreen>
     // <RegisterScreen></RegisterScreen>
     // <ListingsScreen></ListingsScreen>
     // <AccountScreen></AccountScreen>
