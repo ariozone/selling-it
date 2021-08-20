@@ -9,6 +9,7 @@ import * as Permissions from 'expo-permissions'
 import Screen from "./app/components/Screen"
 import { Button, Image } from "react-native"
 import ImageInput from "./app/components/ImageInput"
+import ImageInputList from "./app/components/ImageInputList"
 // import Icon from './app/components/Icon'
 // import Card from "./app/components/Card"
 // import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
@@ -35,28 +36,16 @@ import ImageInput from "./app/components/ImageInput"
 //   label: 'Cameras', value: 3
 // }]
 export default function App() {
-  const [imageUri, setImageUri] = useState()
-  const requestPermission = async () => {
-    const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync()
-    if (!granted) alert('You need to enable access to the library.')
-  }
-  useEffect(() => {
-    requestPermission()
-  }, [])
-  const selectImage = async () => {
-    try {
-      const result = await ImagePicker.launchImageLibraryAsync()
-      if (!result.cancelled)
-        setImageUri(result.uri)
-
-    } catch (error) {
-      console.log('Error loading the image', error)
-    }
-  }
+  const [imageUris, setImageUris] = useState([])
+  const handleAdd = uri => { setImageUris([...imageUris, uri]) }
+  const handleDelete = uri => { setImageUris(imageUris.filter(u => u !== uri)) }
   return (
     <Screen>
-
-      <ImageInput imageUri={imageUri} onChangeImage={uri => setImageUri(uri)}></ImageInput>
+      <ImageInputList
+        imageUris={imageUris}
+        onAddImage={handleAdd}
+        onRemoveImage={handleDelete}
+      ></ImageInputList>
     </Screen>
     // <MessagesScreen></MessagesScreen>
     // <ListingDetailsScreen></ListingDetailsScreen>

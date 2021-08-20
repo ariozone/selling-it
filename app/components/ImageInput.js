@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, StyleSheet, Image, TouchableWithoutFeedback, Alert } from 'react-native';
 import colors from '../config/colors';
 import Icon from './Icon';
 import * as ImagePicker from 'expo-image-picker'
 
 function ImageInput({ imageUri, onChangeImage }) {
+  const requestPermission = async () => {
+    const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync()
+    if (!granted) alert('You need to enable access to the library.')
+  }
+  useEffect(() => {
+    requestPermission()
+  }, [])
   const handlePress = () => {
     if (!imageUri) selectImage()
     else Alert.alert('Delete', 'Are you sure you want to delete this image?', [
