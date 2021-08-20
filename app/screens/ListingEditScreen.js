@@ -4,7 +4,6 @@ import { StyleSheet } from 'react-native'
 import { AppFormField, AppForm, SubmitButton, AppFormPicker } from '../components/forms'
 import * as Yup from 'yup'
 import CategoryPickerItem from '../components/CategoryPickerItem';
-import ImageInput from '../components/ImageInput';
 
 
 const validationSchema = Yup.object().shape({
@@ -22,7 +21,7 @@ const categories = [
 function ListingEditScreen({ width }) {
   return (
     <Screen style={styles.container}>
-      <ImageInput></ImageInput>
+
       <AppForm
         initialValues={
           {

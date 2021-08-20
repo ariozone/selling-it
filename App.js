@@ -35,7 +35,7 @@ import ImageInput from "./app/components/ImageInput"
 //   label: 'Cameras', value: 3
 // }]
 export default function App() {
-  const [imageUri, setImageUri] = useState({})
+  const [imageUri, setImageUri] = useState()
   const requestPermission = async () => {
     const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync()
     if (!granted) alert('You need to enable access to the library.')
@@ -55,10 +55,8 @@ export default function App() {
   }
   return (
     <Screen>
-      <Button title='Select Image' onPress={selectImage}></Button>
 
-      <Image source={{ uri: imageUri }} style={{ width: 200, height: 200 }}></Image>
-      <ImageInput imageUri={imageUri}></ImageInput>
+      <ImageInput imageUri={imageUri} onChangeImage={uri => setImageUri(uri)}></ImageInput>
     </Screen>
     // <MessagesScreen></MessagesScreen>
     // <ListingDetailsScreen></ListingDetailsScreen>
