@@ -17,7 +17,7 @@ function FormImagePicker({ name }) {
         onAddImage={handleAdd}
         onRemoveImage={handleDelete}
       ></ImageInputList>
-      <ErrorMessage></ErrorMessage>
+      <ErrorMessage error={errors[name]} visible={touched[name]}></ErrorMessage>
     </>
   );
 }

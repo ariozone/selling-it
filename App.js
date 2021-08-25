@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import ListingEditScreen from "./app/screens/ListingEditScreen"
 // import RegisterScreen from "./app/screens/RegisterScreen"
 import * as ImagePicker from 'expo-image-picker'
@@ -36,24 +36,24 @@ import ImageInputList from "./app/components/ImageInputList"
 //   label: 'Cameras', value: 3
 // }]
 export default function App() {
-  const [imageUris, setImageUris] = useState([])
-  const handleAdd = uri => { setImageUris([...imageUris, uri]) }
-  const handleDelete = uri => { setImageUris(imageUris.filter(u => u !== uri)) }
-  return (
-    <Screen>
-      <ImageInputList
-        imageUris={imageUris}
-        onAddImage={handleAdd}
-        onRemoveImage={handleDelete}
-      ></ImageInputList>
-    </Screen>
-    // <MessagesScreen></MessagesScreen>
-    // <ListingDetailsScreen></ListingDetailsScreen>
-    // <ListingEditScreen></ListingEditScreen>
-    // <RegisterScreen></RegisterScreen>
-    // <ListingsScreen></ListingsScreen>
-    // <AccountScreen></AccountScreen>
-  )
+  // const [imageUris, setImageUris] = useState([])
+  // const handleAdd = uri => { setImageUris([...imageUris, uri]) }
+  // const handleDelete = uri => { setImageUris(imageUris.filter(u => u !== uri)) }
+  // return (
+  //   <Screen>
+  //     <ImageInputList
+  //       imageUris={imageUris}
+  //       onAddImage={handleAdd}
+  //       onRemoveImage={handleDelete}
+  //     ></ImageInputList>
+  //   </Screen>
+  // <MessagesScreen></MessagesScreen>
+  // <ListingDetailsScreen></ListingDetailsScreen>
+  return <ListingEditScreen></ListingEditScreen>
+  // <RegisterScreen></RegisterScreen>
+  // <ListingsScreen></ListingsScreen>
+  // <AccountScreen></AccountScreen>
+
   //   const [firstName, setFirstName] = useState('')
   //   const handleFirstName = input => setFirstName(input)
   //   const [isNew, setIsNew] = useState(false)
