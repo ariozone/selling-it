@@ -1,15 +1,18 @@
 import React from "react"
-import ListingEditScreen from "./app/screens/ListingEditScreen"
+import { Text } from "react-native"
+//import ListingEditScreen from "./app/screens/ListingEditScreen"
 // import RegisterScreen from "./app/screens/RegisterScreen"
-import * as ImagePicker from 'expo-image-picker'
-import * as Permissions from 'expo-permissions'
+// import * as ImagePicker from 'expo-image-picker'
+// import * as Permissions from 'expo-permissions'
 // import { Button, Switch, Text, TextInput, View } from "react-native"
 // import ViewImageScreen from "./app/screens/ViewImageScreen"
 // import WelcomeScreen from "./app/screens/WelcomeScreen"
 import Screen from "./app/components/Screen"
-import { Button, Image } from "react-native"
-import ImageInput from "./app/components/ImageInput"
-import ImageInputList from "./app/components/ImageInputList"
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import { NavigationContainer } from "@react-navigation/native"
+// import { Button, Image } from "react-native"
+// import ImageInput from "./app/components/ImageInput"
+// import ImageInputList from "./app/components/ImageInputList"
 // import Icon from './app/components/Icon'
 // import Card from "./app/components/Card"
 // import ListingDetailsScreen from "./app/screens/ListingDetailsScreen"
@@ -26,16 +29,32 @@ import ImageInputList from "./app/components/ImageInputList"
 // const colors = require('./app/config/colors')
 
 
-// const categories = [{
-//   label: 'Furniture', value: 1
-// },
-// {
-//   label: 'Clothing', value: 2
-// },
-// {
-//   label: 'Cameras', value: 3
-// }]
+
+const Tweets = () => (
+  <Screen>
+    <Text>Tweets</Text>
+
+  </Screen>
+)
+const TweetDetails = () => (
+  <Screen>
+    <Text>Tweet Details</Text>
+  </Screen>
+
+)
 export default function App() {
+  const Stack = createNativeStackNavigator()
+  const StackNavigator = () => (
+    <Stack.Navigator>
+      <Stack.Screen name='Tweets' component={Tweets}></Stack.Screen>
+      <Stack.Screen name='TweetDetails' component={TweetDetails}></Stack.Screen>
+    </Stack.Navigator>
+  )
+  return (
+    <NavigationContainer>
+      <StackNavigator></StackNavigator>
+    </NavigationContainer>
+  )
   // const [imageUris, setImageUris] = useState([])
   // const handleAdd = uri => { setImageUris([...imageUris, uri]) }
   // const handleDelete = uri => { setImageUris(imageUris.filter(u => u !== uri)) }
@@ -49,7 +68,7 @@ export default function App() {
   //   </Screen>
   // <MessagesScreen></MessagesScreen>
   // <ListingDetailsScreen></ListingDetailsScreen>
-  return <ListingEditScreen></ListingEditScreen>
+  // <ListingEditScreen></ListingEditScreen>
   // <RegisterScreen></RegisterScreen>
   // <ListingsScreen></ListingsScreen>
   // <AccountScreen></AccountScreen>
